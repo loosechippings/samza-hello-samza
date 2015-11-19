@@ -117,8 +117,8 @@ start_zookeeper() {
 
 start_yarn() {
   if [ -f $DEPLOY_ROOT_DIR/$SYSTEM/sbin/yarn-daemon.sh ]; then
-    $DEPLOY_ROOT_DIR/$SYSTEM/sbin/yarn-daemon.sh start resourcemanager
-    $DEPLOY_ROOT_DIR/$SYSTEM/sbin/yarn-daemon.sh start nodemanager
+    $DEPLOY_ROOT_DIR/$SYSTEM/sbin/yarn-daemon.sh --config ${DEPLOY_ROOT_DIR}/../conf start resourcemanager
+    $DEPLOY_ROOT_DIR/$SYSTEM/sbin/yarn-daemon.sh --config ${DEPLOY_ROOT_DIR}/../conf start nodemanager
   else
     echo 'YARN is not installed. Run: bin/grid install yarn'
   fi

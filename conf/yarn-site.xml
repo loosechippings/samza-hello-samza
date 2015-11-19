@@ -30,4 +30,13 @@ under the License.
     <name>yarn.resourcemanager.hostname</name>
     <value>127.0.0.1</value>
   </property>
+
+  <!-- set max memory availabe on node -->
+  <property>
+    <name>yarn.nodemanager.resource.memory-mb</name>
+    <value>4096</value>
+  </property>  <property>
+    <name>yarn.scheduler.minimum-allocation-mb</name>
+    <value>500</value>
+  </property>
 </configuration>
